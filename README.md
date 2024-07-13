@@ -25,3 +25,15 @@ This project implements an intelligent transaction monitoring platform focusing 
 First, install the necessary Python packages:
 ```bash
 pip install confluent_kafka pandas scikit-learn flask joblib
+### 2. Setup kafka
+Download and setup kafka in your system
+2.1 start zookeper
+```bash
+.\bin/zookeeper-server-start.sh config/zookeeper.properties
+2.2 start kafka server
+```bash
+.\bin/kafka-server-start.sh config/server.properties
+2.3 create kafka topic of your choice
+```bash
+bin/kafka-topics.sh --create --topic transactions --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+
