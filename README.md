@@ -41,9 +41,12 @@ Download and setup kafka in your system
 bin/kafka-topics.sh --create --topic transactions --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 ```
 ### 3. Kafka Producer and Kafka Consumer
-- Producer: Sends transaction data to the Kafka topic.
-- Consumer: Reads transaction data from the Kafka topic for processing.
+- Producer: Generates and Sends transaction data to the Kafka topic.
+- Consumer: Reads transaction data from the Kafka topic and process it for model prediction.
 ### 4. Build An Isolation Forest Model Using Pyspark and Sk-learn
-- Use PySpark to process the data and train the model for differentiating between fraud transaction data and normal transaction data.
+- Used PySpark to process the data and train the model for differentiating between fraud transaction data and normal transaction data.
+- Save the model 
 ### 5. Build Flask App for displayig and monitoring the anamolies
--run the app and see the resukts on 'http://localhost:5000/transactions'
+- Data present at the consumer is feeded to the model for prediction and the results are displayed through flask app
+- run the flask_app_script and see the resukts on 'http://localhost:5000/transactions'
+
