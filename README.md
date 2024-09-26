@@ -48,5 +48,5 @@ bin/kafka-topics.sh --create --topic transactions --bootstrap-server localhost:9
 - Save the model 
 ### 5. Build Flask App for displayig and monitoring the anamolies
 - Data present at the consumer is feeded to the model for prediction and the results are displayed through flask app
-- run the flask_app_script and see the resukts on 'http://localhost:5000/transactions'
+- run the flask_app_script and see the results on 'http://localhost:5000/transactions'
 
