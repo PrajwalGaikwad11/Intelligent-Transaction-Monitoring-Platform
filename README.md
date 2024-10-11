@@ -28,13 +28,13 @@ pip install confluent_kafka pandas scikit-learn flask joblib
 ```
 ### 2. Setup kafka
 Download and setup kafka in your system
-2.1 start zookeper
+2.1 Navigate to the kafka directory and start zookeper
 ```bash
-.\bin/zookeeper-server-start.sh config/zookeeper.properties
+./bin/zookeeper-server-start.sh config/zookeeper.properties
 ```
-2.2 start kafka server
+2.2 Navigate to the kafka directory and start kafka server
 ```bash
-.\bin/kafka-server-start.sh config/server.properties
+./bin/kafka-server-start.sh config/server.properties
 ```
 2.3 create kafka topic of your choice
 ```bash
